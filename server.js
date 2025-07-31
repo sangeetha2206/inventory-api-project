@@ -6,7 +6,29 @@ const PORT = 3000;
 app.use(express.json());
 
 // 📦 In-memory array to store product data
-let products = [];
+let products = [
+  {
+    id: 1,
+    name: 'Laptop',
+    price: 999.99,
+    category: 'Electronics',
+    stock: 50
+  },
+  {
+    id: 2,
+    name: 'Smartphone',
+    price: 699.99,
+    category: 'Electronics',
+    stock: 100
+  },
+  {
+    id: 3,
+    name: 'Headphones',
+    price: 199.99,
+    category: 'Accessories',
+    stock: 200
+  }
+];
 
 // 🏠 Root route
 app.get('/', (req, res) => {
